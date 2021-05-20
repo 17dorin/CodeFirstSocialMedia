@@ -9,6 +9,13 @@ namespace CodeFirstSocialMediaDb.Models
 {
     public class Post
     {
+        public Post(string Content)
+        {
+            this.Content = Content;
+            PostDate = DateTime.Now;
+            Likes = 1;
+        }
+
         [Required]
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

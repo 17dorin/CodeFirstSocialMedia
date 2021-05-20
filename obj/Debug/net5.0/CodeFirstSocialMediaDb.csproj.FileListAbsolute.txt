@@ -83,3 +83,6 @@ C:\Users\17dor\source\repos\CodeFirstSocialMediaDb\obj\Debug\net5.0\CodeFirstSoc
 C:\Users\17dor\source\repos\CodeFirstSocialMediaDb\obj\Debug\net5.0\ref\CodeFirstSocialMediaDb.dll
 C:\Users\17dor\source\repos\CodeFirstSocialMediaDb\obj\Debug\net5.0\CodeFirstSocialMediaDb.pdb
 C:\Users\17dor\source\repos\CodeFirstSocialMediaDb\obj\Debug\net5.0\CodeFirstSocialMediaDb.genruntimeconfig.cache
+C:\Users\17dor\source\repos\CodeFirstSocialMediaDb\obj\Debug\net5.0\Razor\Views\Post\Index.cshtml.g.cs
+C:\Users\17dor\source\repos\CodeFirstSocialMediaDb\obj\Debug\net5.0\Razor\Views\Post\Create.cshtml.g.cs
+C:\Users\17dor\source\repos\CodeFirstSocialMediaDb\obj\Debug\net5.0\Razor\Views\Post\Delete.cshtml.g.cs
