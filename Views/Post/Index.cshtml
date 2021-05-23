@@ -7,6 +7,8 @@
     foreach(Post p in Model)
     {
         <p>@p.Content</p>
+        <p>@p.Likes Likes</p>
+        <a asp-action="LikePost" asp-controller="Post" asp-route-id="@p.Id">Like</a>
         <a asp-action="Delete" asp-controller="Post" asp-route-id="@p.Id">Delete</a>
     }
 }

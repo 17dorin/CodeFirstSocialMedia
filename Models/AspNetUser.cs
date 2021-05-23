@@ -35,6 +35,7 @@ namespace CodeFirstSocialMediaDb.Models
         public virtual ICollection<AspNetUserLogin> AspNetUserLogins { get; set; }
         public virtual ICollection<AspNetUserRole> AspNetUserRoles { get; set; }
         public virtual ICollection<AspNetUserToken> AspNetUserTokens { get; set; }
+        public virtual ICollection<LikedPost> LikedPosts { get; set; }
         public virtual ICollection<Post> Posts { get; set; }
     }
 }

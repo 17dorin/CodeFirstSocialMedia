@@ -31,6 +31,7 @@ namespace CodeFirstSocialMediaDb.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> Create(string Content)
         {
@@ -55,6 +56,31 @@ namespace CodeFirstSocialMediaDb.Controllers
         {
             Post postToDelete = (Post)_context.Posts.FirstOrDefault(p => p.Id == id);
             _context.Remove(postToDelete);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> LikePost(int id)
+        {
+            LikedPost lp = new LikedPost();
+            lp.PostId = id;
+            lp.LikingUser = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+
+            Post postToLike = (Post)_context.Posts.FirstOrDefault(p => p.Id == id);
+
+            if(_context.LikedPosts.Contains(lp))
+            {
+                _context.LikedPosts.Remove(lp);
+                postToLike.Likes--;
+            }
+            else
+            {
+                _context.LikedPosts.Add(lp);
+                postToLike.Likes++;
+            }
+
             await _context.SaveChangesAsync();
 
             return RedirectToAction("Index");

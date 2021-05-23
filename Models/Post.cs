@@ -27,7 +27,10 @@ namespace CodeFirstSocialMediaDb.Models
         public int Likes { get; set; }
         [Required]
         public DateTime PostDate { get; set; }
+        [ForeignKey("AspNetUser")]
+        public string AspNetUserId { get; set; }
 
         public AspNetUser AspNetUser { get; set; }
+        public ICollection<LikedPost> LikingUsers { get; set; }
     }
 }

@@ -25,6 +25,7 @@ namespace CodeFirstSocialMediaDb.Models
         public virtual DbSet<AspNetUserRole> AspNetUserRoles { get; set; }
         public virtual DbSet<AspNetUserToken> AspNetUserTokens { get; set; }
         public virtual DbSet<Post> Posts { get; set; }
+        public virtual DbSet<LikedPost> LikedPosts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -137,6 +138,11 @@ namespace CodeFirstSocialMediaDb.Models
             modelBuilder.Entity<FollowedUser>(entity =>
             {
                 entity.HasKey(e => new { e.FollowingUser, e.UserTofollow });
+            });
+
+            modelBuilder.Entity<LikedPost>(entity =>
+            {
+                entity.HasKey(e => new { e.LikingUser, e.PostId });
             });
 
 
